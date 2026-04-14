@@ -34,7 +34,8 @@ body {
   padding: 32px 40px 28px;
   position: relative;
   border-radius: 24px 24px 0 0;
-  margin: 16px 16px 0;
+  max-width: 960px;
+  margin: 16px auto 0;
 }
 .hdr::before {
   content: '';
@@ -99,7 +100,8 @@ body {
   gap: 14px;
   flex-wrap: wrap;
   border-radius: 0 0 24px 24px;
-  margin: 0 16px 24px;
+  max-width: 960px;
+  margin: 0 auto 24px;
 }
 .ai-pill {
   background: rgba(201,150,44,.15);
@@ -452,6 +454,10 @@ body {
 }
 @keyframes slideUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
 
+@media (max-width: 960px) {
+  .hdr { margin: 16px 16px 0; }
+  .ai-bar { margin: 0 16px 24px; }
+}
 @media (max-width: 640px) {
   .hdr { margin: 8px 8px 0; padding: 24px 20px 20px; }
   .ai-bar { margin: 0 8px 16px; padding: 14px 20px; }
