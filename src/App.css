@@ -100,7 +100,6 @@ body {
   margin-top: 8px;        /* ← 加這行 */
   border-radius: 12px;    /* ← 加這行，讓 ai-bar 也有圓角更好看 */
 }
-}
 .ai-pill {
   background: rgba(201,150,44,.15);
   border: 1px solid rgba(201,150,44,.4);
