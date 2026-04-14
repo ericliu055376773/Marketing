@@ -49,10 +49,11 @@ export default function App() {
   };
 
   const deleteStrategy = async (id) => {
-    await deleteDoc(doc(db, "strategies", id));
-    setStrategies(prev => prev.filter(s => s.id !== id));
-    showToast("策略已移除");
-  };
+  if (!window.confirm("確定要刪除這筆策略嗎？")) return;
+  await deleteDoc(doc(db, "strategies", id));
+  setStrategies(prev => prev.filter(s => s.id !== id));
+  showToast("策略已移除");
+};
 
   const searchAI = async () => {
     setAiLoading(true);
